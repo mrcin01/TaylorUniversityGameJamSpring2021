@@ -1,0 +1,560 @@
+[gd_scene load_steps=80 format=2]
+
+[ext_resource path="res://Assets/Background/single_background.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Grassland_Assets/pixel_platform_01_tileset_final.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/SwordPlayer1.gd" type="Script" id=3]
+[ext_resource path="res://Slime_Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ExitPortal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/GameFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Assets/Buttons/PNG/Button19.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Buttons/PNG/Button22.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Level1.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Music/ogg/joshua-mclean_blue-blast.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump1.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sword_Player/Idle/idle3.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack12.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack15.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sword_Player/Running/running2.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Sword_Player/Running/running1.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Sword_Player/Idle/idle1.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump8.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack8.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Sword_Player/Idle/idle0.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump9.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Sword_Player/Idle/idle2.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump6.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Sword_Player/Running/running4.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack10.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump0.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Sword_Player/Running/running3.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump2.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump7.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack17.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack18.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Sword_Player/Running/running0.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Sword_Player/Running/running5.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump4.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump3.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump5.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack1.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack19.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack13.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack2.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack7.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Sword_Player/LevelLeave.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack0.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack9.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack6.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack11.png" type="Texture" id=46]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack5.png" type="Texture" id=47]
+[ext_resource path="res://Assets/Sword_Player/Death/death1.png" type="Texture" id=48]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack16.png" type="Texture" id=49]
+[ext_resource path="res://Assets/Sword_Player/Death/death4.png" type="Texture" id=50]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack4.png" type="Texture" id=51]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack14.png" type="Texture" id=52]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack3.png" type="Texture" id=53]
+[ext_resource path="res://Assets/Sword_Player/Death/death3.png" type="Texture" id=54]
+[ext_resource path="res://Assets/Sword_Player/Death/death0.png" type="Texture" id=55]
+[ext_resource path="res://Assets/Sword_Player/Death/death2.png" type="Texture" id=56]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=3]
+3/name = "pixel_platform_01_tileset_final.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 128, 160, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 1 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "pixel_platform_01_tileset_final.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 128, 192, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 2 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+
+[sub_resource type="TileSet" id=4]
+0/name = "pixel_platform_01_tileset_final.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 32, 256, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "pixel_platform_01_tileset_final.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 96, 64, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "pixel_platform_01_tileset_final.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 128, 64, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "pixel_platform_01_tileset_final.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 160, 64, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "pixel_platform_01_tileset_final.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 128, 32, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 62.9562, 10.5598 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 95.8477, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 125.757, 11.954 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 123.37, 14.7871 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 2267.23, 45.819 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 17 ), ExtResource( 22 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ) ],
+"loop": true,
+"name": "levelLeave",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "running",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 37 ), ExtResource( 40 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 47 ), ExtResource( 45 ), ExtResource( 41 ), ExtResource( 19 ), ExtResource( 44 ), ExtResource( 25 ), ExtResource( 46 ), ExtResource( 13 ), ExtResource( 39 ), ExtResource( 52 ), ExtResource( 14 ), ExtResource( 49 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "attack",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 55 ), ExtResource( 48 ), ExtResource( 56 ), ExtResource( 54 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "death",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 26 ), ExtResource( 28 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 36 ), ExtResource( 23 ), ExtResource( 29 ), ExtResource( 18 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=11]
+radius = 17.5365
+height = 22.8918
+
+[sub_resource type="CapsuleShape2D" id=12]
+radius = 19.3547
+height = 17.1204
+
+[sub_resource type="CapsuleShape2D" id=13]
+radius = 15.684
+
+[sub_resource type="DynamicFontData" id=14]
+font_path = "res://Assets/good times rg.ttf"
+
+[sub_resource type="DynamicFont" id=15]
+size = 25
+font_data = SubResource( 14 )
+
+[sub_resource type="DynamicFontData" id=16]
+font_path = "res://Assets/good times rg.ttf"
+
+[sub_resource type="DynamicFont" id=17]
+size = 25
+font_data = SubResource( 16 )
+
+[sub_resource type="DynamicFontData" id=18]
+font_path = "res://Assets/good times rg.ttf"
+
+[sub_resource type="DynamicFont" id=19]
+size = 20
+font_data = SubResource( 18 )
+
+[sub_resource type="DynamicFontData" id=20]
+font_path = "res://Assets/good times rg.ttf"
+
+[sub_resource type="DynamicFont" id=21]
+size = 25
+font_data = SubResource( 20 )
+
+[sub_resource type="DynamicFontData" id=22]
+font_path = "res://Assets/good times rg.ttf"
+
+[sub_resource type="DynamicFont" id=23]
+size = 25
+font_data = SubResource( 22 )
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="TileMapSolid" type="TileMap" parent="."]
+tile_set = SubResource( 3 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+collision_use_kinematic = true
+collision_layer = 3
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( 65535, 3, 0, 131071, 3, 0, 196607, 3, 0, 262143, 3, 0, 327679, 3, 0, 393215, 3, 0, 458751, 3, 0, 524287, 3, 0, 589823, 3, 0, 655359, 3, 0, 720895, 3, 0, 786431, 3, 0, 851967, 3, 0, 917503, 3, 0, 983039, 3, 0, 1048575, 3, 0, 983072, 3, 0, 983073, 3, 0, 983074, 3, 0, 983075, 3, 0, 983076, 3, 0, 983077, 3, 0, 983078, 3, 0, 983120, 3, 0, 983121, 3, 0, 983122, 3, 0, 983123, 3, 0, 983124, 3, 0, 983125, 3, 0, 983126, 3, 0, 1114111, 3, 0, 1048608, 4, 0, 1048609, 4, 0, 1048610, 4, 0, 1048611, 4, 0, 1048612, 4, 0, 1048613, 4, 0, 1048614, 4, 0, 1048656, 4, 0, 1048657, 4, 0, 1048658, 4, 0, 1048659, 4, 0, 1048660, 4, 0, 1048661, 4, 0, 1048662, 4, 0, 1179647, 2, 0, 1114112, 3, 0, 1114113, 3, 0, 1114114, 3, 0, 1114115, 3, 0, 1114116, 3, 0, 1114117, 3, 0, 1114118, 3, 0, 1114119, 3, 0, 1114120, 3, 0, 1114121, 3, 0, 1114122, 3, 0, 1114123, 3, 0, 1114124, 3, 0, 1114125, 3, 0, 1114126, 3, 0, 1114127, 3, 0, 1114128, 3, 0, 1114129, 3, 0, 1114130, 3, 0, 1114131, 3, 0, 1114132, 3, 0, 1114133, 3, 0, 1114134, 3, 0, 1114135, 3, 0, 1114136, 3, 0, 1114137, 3, 0, 1114138, 3, 0, 1114139, 3, 0, 1114140, 3, 0, 1114141, 3, 0, 1114142, 3, 0, 1114143, 3, 0, 1114144, 4, 0, 1114145, 4, 0, 1114146, 4, 0, 1114147, 4, 0, 1114148, 4, 0, 1114149, 4, 0, 1114150, 4, 0, 1114165, 3, 0, 1114166, 3, 0, 1114167, 3, 0, 1114168, 3, 0, 1114169, 3, 0, 1114170, 3, 0, 1114171, 3, 0, 1114172, 3, 0, 1114173, 3, 0, 1114174, 3, 0, 1114175, 3, 0, 1114180, 3, 0, 1114181, 3, 0, 1114182, 3, 0, 1114183, 3, 0, 1114184, 3, 0, 1114185, 3, 0, 1114186, 3, 0, 1114187, 3, 0, 1114192, 4, 0, 1114193, 4, 0, 1114194, 4, 0, 1114195, 4, 0, 1114196, 4, 0, 1114197, 4, 0, 1114198, 4, 0, 1114249, 3, 0, 1114250, 3, 0, 1114251, 3, 0, 1114252, 3, 0, 1114253, 3, 0, 1114254, 3, 0, 1114255, 3, 0, 1114256, 3, 0, 1114257, 3, 0, 1114258, 3, 0, 1114259, 3, 0, 1114260, 3, 0, 1114261, 3, 0, 1114262, 3, 0, 1114263, 3, 0, 1114264, 3, 0, 1114265, 3, 0, 1114266, 3, 0, 1114267, 3, 0, 1179648, 4, 0, 1179649, 4, 0, 1179650, 4, 0, 1179651, 4, 0, 1179652, 4, 0, 1179653, 4, 0, 1179654, 4, 0, 1179655, 4, 0, 1179656, 4, 0, 1179657, 4, 0, 1179658, 4, 0, 1179659, 4, 0, 1179660, 4, 0, 1179661, 4, 0, 1179662, 4, 0, 1179663, 4, 0, 1179664, 4, 0, 1179665, 4, 0, 1179666, 4, 0, 1179667, 4, 0, 1179668, 4, 0, 1179669, 4, 0, 1179670, 4, 0, 1179671, 4, 0, 1179672, 4, 0, 1179673, 4, 0, 1179674, 4, 0, 1179675, 4, 0, 1179676, 4, 0, 1179677, 4, 0, 1179678, 4, 0, 1179679, 4, 0, 1179680, 4, 0, 1179681, 4, 0, 1179682, 4, 0, 1179683, 4, 0, 1179684, 4, 0, 1179685, 4, 0, 1179686, 4, 0, 1179701, 4, 0, 1179702, 4, 0, 1179703, 4, 0, 1179704, 4, 0, 1179705, 4, 0, 1179706, 4, 0, 1179707, 4, 0, 1179708, 4, 0, 1179709, 4, 0, 1179710, 4, 0, 1179711, 4, 0, 1179716, 4, 0, 1179717, 4, 0, 1179718, 4, 0, 1179719, 4, 0, 1179720, 4, 0, 1179721, 4, 0, 1179722, 4, 0, 1179723, 4, 0, 1179728, 4, 0, 1179729, 4, 0, 1179730, 4, 0, 1179731, 4, 0, 1179732, 4, 0, 1179733, 4, 0, 1179734, 4, 0, 1179785, 4, 0, 1179786, 4, 0, 1179787, 4, 0, 1179788, 4, 0, 1179789, 4, 0, 1179790, 4, 0, 1179791, 4, 0, 1179792, 4, 0, 1179793, 4, 0, 1179794, 4, 0, 1179795, 4, 0, 1179796, 4, 0, 1179797, 4, 0, 1179798, 4, 0, 1179799, 4, 0, 1179800, 4, 0, 1179801, 4, 0, 1179802, 4, 0, 1179803, 4, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMapOneWay" type="TileMap" parent="."]
+tile_set = SubResource( 4 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 852005, 1, 0, 852006, 2, 0, 852007, 2, 0, 852008, 3, 0, 852012, 1, 0, 852013, 2, 0, 852014, 2, 0, 852015, 2, 0, 852016, 3, 0, 917623, 1, 0, 917624, 2, 0, 917625, 2, 0, 917626, 2, 0, 917627, 2, 0, 917628, 2, 0, 917629, 2, 0, 917630, 3, 0, 983143, 1, 0, 983144, 2, 0, 983145, 2, 0, 983146, 2, 0, 983147, 2, 0, 983148, 2, 0, 983149, 2, 0, 983150, 3, 0, 1114203, 1, 0, 1114204, 2, 0, 1114205, 2, 0, 1114206, 2, 0, 1114207, 2, 0, 1114208, 3, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMapOneWay"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapOneWay/StaticBody2D"]
+position = Vector2( 1248.12, 428.478 )
+shape = SubResource( 5 )
+one_way_collision = true
+one_way_collision_margin = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMapOneWay/StaticBody2D"]
+position = Vector2( 1487.92, 428.478 )
+shape = SubResource( 6 )
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMapOneWay/StaticBody2D"]
+position = Vector2( 3007.2, 552.229 )
+shape = SubResource( 6 )
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMapOneWay/StaticBody2D"]
+position = Vector2( 3425.73, 496.256 )
+shape = SubResource( 7 )
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMapOneWay/StaticBody2D"]
+position = Vector2( 3935.99, 466.883 )
+shape = SubResource( 8 )
+one_way_collision = true
+
+[node name="Bottom Screen Death" type="Area2D" parent="."]
+position = Vector2( 2262.94, 653.367 )
+collision_layer = 8
+collision_mask = 8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom Screen Death"]
+position = Vector2( 0, 6.10352e-05 )
+shape = SubResource( 9 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1024, 0 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="BackGround" type="Sprite" parent="ParallaxBackground/Background Clouds"]
+position = Vector2( 514.045, 300.285 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+
+[node name="SwordPlayer" type="KinematicBody2D" parent="."]
+position = Vector2( 85, 501 )
+z_index = 1
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="SwordPlayer"]
+position = Vector2( 0, 10.4433 )
+scale = Vector2( 2, 2.5 )
+frames = SubResource( 10 )
+animation = "idle"
+frame = 2
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordPlayer"]
+position = Vector2( 0, -5.52972 )
+z_index = 1
+shape = SubResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="SwordPlayer"]
+position = Vector2( 0, -220 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 4950
+limit_bottom = 600
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_top = 0.5
+drag_margin_bottom = 0.5
+editor_draw_limits = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hitbox" type="Area2D" parent="SwordPlayer"]
+position = Vector2( 20, 0 )
+collision_layer = 4
+collision_mask = 4
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="HitboxShape" type="CollisionShape2D" parent="SwordPlayer/Hitbox"]
+rotation = 1.5708
+shape = SubResource( 12 )
+disabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hurtbox" type="Area2D" parent="SwordPlayer"]
+position = Vector2( 20, 0 )
+collision_layer = 8
+collision_mask = 8
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="HurtboxShape" type="CollisionShape2D" parent="SwordPlayer/Hurtbox"]
+position = Vector2( -20, 0 )
+shape = SubResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Slime1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 768, 528 )
+movementRange = 100
+
+[node name="Level_Exit" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4703.95, 449.013 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Stopwatch" type="Label" parent="CanvasLayer"]
+margin_left = 803.0
+margin_top = 25.4271
+margin_right = 978.905
+margin_bottom = 56.4271
+custom_fonts/font = SubResource( 15 )
+text = "00:00:000"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Win Label" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 253.212
+margin_top = 134.552
+margin_right = 748.212
+margin_bottom = 177.552
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You Beat The Level!!!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResetButton" type="TextureButton" parent="CanvasLayer"]
+visible = false
+margin_left = 303.006
+margin_top = 290.681
+margin_right = 451.006
+margin_bottom = 389.681
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/ResetButton"]
+margin_left = -24.7949
+margin_top = 19.1675
+margin_right = 182.205
+margin_bottom = 84.1675
+custom_fonts/font = SubResource( 17 )
+text = "Reset
+Level"
+align = 1
+valign = 1
+
+[node name="BackToMenuButton" type="TextureButton" parent="CanvasLayer"]
+visible = false
+margin_left = 572.969
+margin_top = 290.681
+margin_right = 715.969
+margin_bottom = 380.681
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/BackToMenuButton"]
+margin_left = -11.0
+margin_top = 20.0
+margin_right = 159.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 19 )
+text = "Back to 
+Menu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YourScore" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 128.0
+margin_top = 208.0
+margin_right = 350.0
+margin_bottom = 255.0
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Your Score: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BestScore" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 608.0
+margin_top = 208.0
+margin_right = 819.0
+margin_bottom = 248.0
+custom_fonts/font = SubResource( 23 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Best Score: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+max_distance = 1e+14
+[connection signal="level_exit" from="SwordPlayer" to="Level_Exit" method="_on_SwordPlayer_level_exit"]
+[connection signal="area_entered" from="SwordPlayer/Hurtbox" to="SwordPlayer" method="_on_Hurtbox_area_entered"]
+[connection signal="dead" from="Slime1" to="SwordPlayer" method="_on_Slime1_dead"]
+[connection signal="body_entered" from="Level_Exit" to="SwordPlayer" method="_on_Level_Exit_body_entered"]
+[connection signal="pressed" from="CanvasLayer/ResetButton" to="." method="_on_ResetButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/BackToMenuButton" to="." method="_on_BackToMenuButton_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/joshua-mclean_fate-of-them-all.ogg-376634908a6787227b39d709b9b4fa9e.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/ogg/joshua-mclean_fate-of-them-all.ogg"
+dest_files=[ "res://.import/joshua-mclean_fate-of-them-all.ogg-376634908a6787227b39d709b9b4fa9e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

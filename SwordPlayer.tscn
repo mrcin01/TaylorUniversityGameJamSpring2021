@@ -1,0 +1,172 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://Scripts/SwordPlayer1.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sword_Player/Idle/idle0.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sword_Player/Idle/idle1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sword_Player/Idle/idle2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sword_Player/Idle/idle3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sword_Player/Running/running1.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sword_Player/Running/running2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sword_Player/Running/running4.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sword_Player/Running/running3.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sword_Player/Running/running5.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sword_Player/Running/running0.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump4.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump3.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump6.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump0.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump8.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump2.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump9.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump1.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump7.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Sword_Player/Jump/jump5.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack18.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack17.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack10.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack8.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack12.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack15.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack1.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack13.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack2.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack0.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack9.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack19.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack6.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack16.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack4.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack5.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack7.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack11.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack3.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Sword_Player/Attack/attack14.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Sword_Player/Death/death1.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Sword_Player/Death/death3.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Sword_Player/Death/death4.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Sword_Player/Death/death2.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Sword_Player/Death/death0.png" type="Texture" id=46]
+[ext_resource path="res://Assets/Sword_Player/LevelLeave.png" type="Texture" id=47]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 47 ) ],
+"loop": true,
+"name": "levelLeave",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "running",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 38 ), ExtResource( 25 ), ExtResource( 32 ), ExtResource( 24 ), ExtResource( 39 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 41 ), ExtResource( 27 ), ExtResource( 35 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "attack",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 42 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "death",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 21 ), ExtResource( 14 ), ExtResource( 20 ), ExtResource( 16 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 17.5365
+height = 22.8918
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 19.3547
+height = 17.1204
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 15.684
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 0.8909, -3.5636 )
+z_index = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 10.4433 )
+scale = Vector2( 2, 2.5 )
+frames = SubResource( 1 )
+animation = "idle"
+frame = 2
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -5.52972 )
+z_index = 1
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -220 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 4950
+limit_bottom = 600
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_top = 0.5
+drag_margin_bottom = 0.5
+editor_draw_limits = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hitbox" type="Area2D" parent="."]
+position = Vector2( 20, 0 )
+collision_layer = 4
+collision_mask = 4
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="HitboxShape" type="CollisionShape2D" parent="Hitbox"]
+rotation = 1.5708
+shape = SubResource( 3 )
+disabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hurtbox" type="Area2D" parent="."]
+position = Vector2( 20, 0 )
+collision_layer = 8
+collision_mask = 8
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="HurtboxShape" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2( -20, 0 )
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]

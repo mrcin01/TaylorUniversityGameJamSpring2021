@@ -1,0 +1,13 @@
+1. 
+    Celeritare Perfide
+
+2.
+    2d platformer with emphasis on speed and being the fastest person to complete the level.
+
+8.
+    Controls with keyboard or arcade stick and keyboard controls are right and left with "A" and "D" "Space" or "W" to jump and "J" to dash.
+    I created nothing from scratch and used internet assests.
+    https://itch.io/c/1530583/gamejamspring2021 
+    I made this game by myself.
+    I used Godot to make my game.
+    Download the zip and run the executable.

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/joshua-mclean_blue-blast.ogg-e663a66c9f7eea06d7606e75e2233104.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/ogg/joshua-mclean_blue-blast.ogg"
+dest_files=[ "res://.import/joshua-mclean_blue-blast.ogg-e663a66c9f7eea06d7606e75e2233104.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

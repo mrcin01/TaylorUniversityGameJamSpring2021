@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/joshua-mclean_laboratory-electric.ogg-5f06aa7bac8bc57ea5767693f61315e0.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/ogg/joshua-mclean_laboratory-electric.ogg"
+dest_files=[ "res://.import/joshua-mclean_laboratory-electric.ogg-5f06aa7bac8bc57ea5767693f61315e0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
